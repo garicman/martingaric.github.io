@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Nom - Site Personnel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #0a0a0a;
+            padding: 30px;
+            border: 2px solid #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        .ascii-art {
+            color: #00ff00;
+            font-size: 10px;
+            line-height: 1.2;
+            white-space: pre;
+            overflow-x: auto;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00ff00;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            color: #00ff00;
+            margin: 30px 0 15px 0;
+            font-size: 1.4rem;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: #00ff00;
+            margin: 20px 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            border-bottom: 1px dotted #00ff00;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            color: #00ffff;
+            border-bottom: 1px solid #00ffff;
+            text-shadow: 0 0 5px #00ffff;
+        }
+
+        .nav {
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            border: 1px solid #00ff00;
+            background-color: #0f0f0f;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            padding: 5px 10px;
+            border: 1px solid #00ff00;
+            display: inline-block;
+        }
+
+        .nav a:hover {
+            background-color: #00ff00;
+            color: #0a0a0a;
+        }
+
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 3px solid #00ff00;
+            background-color: #0f0f0f;
+        }
+
+        .project-item {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #004400;
+            background-color: #0a0a0a;
+        }
+
+        .project-item:hover {
+            border-color: #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        ul li:before {
+            content: "> ";
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .contact-box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            text-align: center;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+
+        .cursor:after {
+            content: "_";
+            animation: blink 1s infinite;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #00ff00;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .ascii-art {
+                font-size: 6px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+
+            .nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main-container">
+        <div class="ascii-art">
+ __     __    _             _   _                 
+ \ \   / /__ | |_ _ __ ___  | \ | | ___  _ __ ___  
+  \ \ / / _ \| __| '__/ _ \ |  \| |/ _ \| '_ ` _ \ 
+   \ V / (_) | |_| | |  __/ | |\  | (_) | | | | | |
+    \_/ \___/ \__|_|  \___| |_| \_|\___/|_| |_| |_|
+        </div>
+
+        <h1>[ VOTRE NOM ]</h1>
+        <p style="text-align: center; font-size: 1.1rem;">
+            &gt;&gt; Développeur | Ingénieur | Maker &lt;&lt;
+        </p>
+
+        <div class="nav">
+            <a href="#accueil">[ ACCUEIL ]</a>
+            <a href="#about">[ À PROPOS ]</a>
+            <a href="#projets">[ PROJETS ]</a>
+            <a href="#competences">[ COMPÉTENCES ]</a>
+            <a href="#contact">[ CONTACT ]</a>
+        </div>
+
+        <div id="accueil" class="section">
+            <h2>&gt; Bienvenue_</h2>
+            <p>
+                Bienvenue sur mon site personnel. Vous trouverez ici mes projets, 
+                mes réalisations en électronique, développement et autres expérimentations 
+                techniques.
+            </p>
+            <p>
+                Ce site est dédié au partage de connaissances et à la documentation de 
+                mes travaux dans les domaines de l'informatique embarquée, de la programmation 
+                et de l'électronique.
+            </p>
+        </div>
+
+        <div id="about" class="section">
+            <h2>&gt; À propos_</h2>
+            <p>
+                Passionné par les nouvelles technologies depuis toujours, j'ai développé 
+                une expertise dans plusieurs domaines complémentaires :
+            </p>
+            <ul>
+                <li>Développement logiciel et web</li>
+                <li>Systèmes embarqués et microcontrôleurs</li>
+                <li>Électronique et IoT</li>
+                <li>Automatisation et domotique</li>
+            </ul>
+            <p>
+                Mon approche combine théorie et pratique, avec un focus sur la création 
+                de solutions concrètes et fonctionnelles.
+            </p>
+        </div>
+
+        <div id="projets" class="section">
+            <h2>&gt; Projets_</h2>
+            
+            <div class="project-item">
+                <h3>[01] Projet Arduino - Domotique</h3>
+                <p>
+                    Système de contrôle domotique basé sur Arduino pour la gestion de 
+                    l'éclairage, de la température et de la sécurité. Utilisation de 
+                    capteurs DHT22, relais et modules RF 433MHz.
+                </p>
+                <p><strong>Technologies :</strong> Arduino, C++, MQTT, Node-RED</p>
+            </div>
+
+            <div class="project-item">
+                <h3>[02] Station Météo Connectée</h3>
+                <p>
+                    Station météorologique autonome avec ESP8266, envoyant les données 
+                    (température, humidité, pression) vers un serveur web pour visualisation 
+                    en temps réel.
+                </p>
+                <p><strong>Technologies :</strong> ESP8266, BME280, Python, Flask</p>
+            </div>
+
+            <div class="project-item">
+                <h3>[03] Robot Autonome</h3>
+                <p>
+                    Robot mobile évitant les obstacles, utilisant des capteurs ultrasoniques 
+                    et un algorithme de navigation simple. Projet éducatif pour l'apprentissage 
+                    de la robotique.
+                </p>
+                <p><strong>Technologies :</strong> Arduino Uno, Moteurs DC, HC-SR04</p>
+            </div>
+
+            <div class="project-item">
+                <h3>[04] Application Web de Gestion</h3>
+                <p>
+                    Application web responsive pour la gestion de projets personnels avec 
+                    authentification, base de données et interface utilisateur moderne.
+                </p>
+                <p><strong>Technologies :</strong> HTML/CSS/JavaScript, Node.js, MongoDB</p>
+            </div>
+        </div>
+
+        <div id="competences" class="section">
+            <h2>&gt; Compétences_</h2>
+            
+            <h3>// Langages de programmation</h3>
+            <ul>
+                <li>C / C++</li>
+                <li>Python</li>
+                <li>JavaScript / Node.js</li>
+                <li>HTML / CSS</li>
+                <li>SQL</li>
+            </ul>
+
+            <h3>// Électronique & Embarqué</h3>
+            <ul>
+                <li>Arduino (Uno, Mega, Nano)</li>
+                <li>ESP8266 / ESP32</li>
+                <li>Raspberry Pi</li>
+                <li>Conception de circuits PCB</li>
+                <li>Protocoles : I2C, SPI, UART, MQTT</li>
+            </ul>
+
+            <h3>// Outils & Technologies</h3>
+            <ul>
+                <li>Git / GitHub</li>
+                <li>Linux / Shell scripting</li>
+                <li>Docker</li>
+                <li>VS Code / Arduino IDE</li>
+                <li>Fritzing / KiCad</li>
+            </ul>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>&gt; Contact_</h2>
+            <div class="contact-box">
+                <p><strong>&gt;&gt; EMAIL :</strong> votre.email@example.com</p>
+                <p><strong>&gt;&gt; GITHUB :</strong> <a href="https://github.com/votrenom" target="_blank">github.com/votrenom</a></p>
+                <p><strong>&gt;&gt; LINKEDIN :</strong> <a href="https://linkedin.com/in/votrenom" target="_blank">linkedin.com/in/votrenom</a></p>
+            </div>
+            <p style="text-align: center; margin-top: 20px;">
+                N'hésitez pas à me contacter pour toute question, collaboration ou partage d'idées<span class="blink">_</span>
+            </p>
+        </div>
+
+        <footer>
+            <p>[ © 2025 VOTRE NOM - TOUS DROITS RÉSERVÉS ]</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">
+                Site hébergé sur GitHub Pages | Dernière mise à jour : Octobre 2025
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
